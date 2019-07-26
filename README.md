@@ -11,3 +11,11 @@ Follow these steps to install and run this plugin in your Kiuwan analysis:
 4. once the JaCoCo report is inside your source directory, run Kiuwan Local Analyzer program:
 
     > {kiuwan_local_analyzer_installation_dir}\bin\agent.cmd -n {app_name} -s {src_dir}
+    
+## how does it work?
+This is a technology that allows users to import defects/vulnerabilities into Kiuwan from JaCoCo report files. If the coverage of a file is between 70% and 90% (default values), a violation is generated and reported by Kiuwan. These thresholds can be modified by editing the rule from Kiuwan, as well as the name of the report that the rule will search (jacoco.xml by default).
+
+### rule CUS.MCP.KIUWAN.RULES.JACOCO.Plugin
+This Kiuwan plugin is really a Kiuwan native rule that looks for a JaCoCo report file (called jacoco.xml by default) and generates 'Kiuwan defects' for each 'file whose coverage percentage is between the rule thresholds' reported in that file.
+
+You need to upload and insert this rule dist/ruledef/CUS.MCP.KIUWAN.RULES.JACOCO.Plugin.rule.xml in your Kiuwan model to ensure that JaCoCo report is processed.
