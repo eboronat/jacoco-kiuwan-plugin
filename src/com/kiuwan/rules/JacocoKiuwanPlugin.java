@@ -57,8 +57,8 @@ public class JacocoKiuwanPlugin extends AbstractRule {
 
 	public void initialize (RuleContext ctx) { 
 		super.initialize(ctx);	
-		thresholdMax = getProperty("thresholdMax",90); //Take threshold from rule definition. Default 90
-		thresholdMin = getProperty("thresholdMin",70); //Take threshold from rule definition. Default 70
+		thresholdMax = getProperty("thresholdMax",50); //Take threshold from rule definition. Default 50
+		thresholdMin = getProperty("thresholdMin",0); //Take threshold from rule definition. Default 0
 		COBERTURA_REPORT_NAME = getProperty("COBERTURA_REPORT_NAME", "jacoco.xml"); //Take report name. Default jacoco.xml
 		
 		File baseDir = ctx.getBaseDirs().get(0);

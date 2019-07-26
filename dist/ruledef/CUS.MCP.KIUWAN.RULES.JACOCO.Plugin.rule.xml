@@ -6,10 +6,10 @@
     <java-version>1.8</java-version>
     <parameters>
       <parameter id="thresholdMax" editable="true">
-        <default-value><![CDATA[90]]></default-value>
+        <default-value><![CDATA[50]]></default-value>
       </parameter>
       <parameter id="thresholdMin" editable="true">
-        <default-value><![CDATA[70]]></default-value>
+        <default-value><![CDATA[0]]></default-value>
       </parameter>
       <parameter id="COBERTURA_REPORT_NAME" editable="true">
         <default-value><![CDATA[jacoco.xml]]></default-value>
