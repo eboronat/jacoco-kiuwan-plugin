@@ -104,6 +104,11 @@ public class JacocoKiuwanPlugin extends AbstractRule {
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 		factory.setNamespaceAware(true);
 		factory.setValidating(false);
+		factory.setFeature("http://xml.org/sax/features/validation", false);
+		factory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
+		factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);  
+		factory.setFeature("http://xml.org/sax/features/resolve-dtd-uris", false);
+		
 		SAXParser parser = factory.newSAXParser();
 
 		CoberturaReportHandler handler = new CoberturaReportHandler(ctx, p.toFile());
