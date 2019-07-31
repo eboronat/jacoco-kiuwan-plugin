@@ -1,4 +1,4 @@
-package com.kiuwan.rules;
+package eb.kiuwan.rules.jacoco;
 // MIT License
 //
 // Copyright (c) 2019 R. Meppelink, Kiuwan.
@@ -173,7 +173,7 @@ public class JacocoKiuwanPlugin extends AbstractRule {
 					
 					if (thresholdMax > dCoverage && thresholdMin <= dCoverage) { 
 						ctx.setSourceCodeFilename(new File(fileName));
-						ctx.getReport().addRuleViolation(createRuleViolation(ctx, 1, "The coverage is: " + df.format(dCoverage) + "%",""));
+						ctx.getReport().addRuleViolation(createRuleViolation(ctx, 1, "The coverage is: " + df.format(dCoverage) + "%","Poor coverage"));
 					}
 					logger.debug("CoberturaReportHandler.startElement(counter INSTRUCTION, "+ fileName + ", " + missed + ", " + covered + ", Coverage=" + df.format(dCoverage) + "%)");				
 				}
