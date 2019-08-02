@@ -15,6 +15,8 @@ Follow these steps to install and run this plugin in your Kiuwan analysis:
 ## how does it work?
 This is a technology that allows users to import defects/vulnerabilities into Kiuwan from JaCoCo report files. If the coverage of a file is between 0% and 50% (default values), a violation is generated and reported by Kiuwan. These thresholds can be modified by editing the rule from Kiuwan, as well as the name of the report that the rule will search (jacoco.xml by default).
 
+Note that the first threshold (minimum) should always be 0%. It can be modified in case you want to add the rule several times to 'play' with the priorities according to the coverage. For example: Rule1 (0%-30%) -> High, Rule2 (30%-60%) -> Medium, Rule3 (60%-80%) -> Low.
+
 ### rule CUS.MCP.KIUWAN.RULES.JACOCO.Plugin
 This Kiuwan plugin is really a Kiuwan native rule that looks for a JaCoCo report file (called jacoco.xml by default) and generates 'Kiuwan defects' for each 'file whose coverage percentage is between the rule thresholds' reported in that file.
 
